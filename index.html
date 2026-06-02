@@ -10,249 +10,356 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Segoe UI,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
 background:
-radial-gradient(circle at top left,#2a0845 0%,transparent 30%),
-radial-gradient(circle at bottom right,#16213e 0%,transparent 30%),
-linear-gradient(135deg,#050505,#0f0f18,#050505);
+radial-gradient(circle at top,#173f5f 0%,transparent 35%),
+radial-gradient(circle at bottom,#0b1f33 0%,transparent 35%),
+linear-gradient(180deg,#020305,#07111d,#020305);
 color:white;
+overflow-x:hidden;
 }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:40px 10%;
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle,#00cfff22 1px,transparent 1px);
+background-size:40px 40px;
+pointer-events:none;
+opacity:.25;
 }
 
-.logo{
-font-size:28px;
-font-weight:bold;
-color:#b14cff
-}
+/* HERO */
 
 .hero{
+min-height:100vh;
 display:flex;
-flex-wrap:wrap;
+justify-content:center;
 align-items:center;
-justify-content:space-between;
-padding:60px 10%;
+padding:50px 20px;
+text-align:center;
 }
 
-.hero-text h1{
-font-size:60px;
-color:#b14cff;
+.brand-logo{
+width:250px;
+height:250px;
+object-fit:cover;
+border-radius:30px;
+
+box-shadow:
+0 0 20px #00cfff,
+0 0 50px #00cfff,
+0 0 100px #00cfff;
+
+margin-bottom:30px;
+}
+
+.hero h1{
+font-size:70px;
+font-weight:800;
+letter-spacing:3px;
+
+color:#ffffff;
+
 text-shadow:
-0 0 10px #b14cff,
-0 0 20px #b14cff,
-0 0 40px #b14cff,
-0 0 80px #b14cff;
+0 0 10px #00cfff,
+0 0 25px #00cfff,
+0 0 50px #00cfff;
 }
 
-.hero-text span{
-color:#b14cff;
+.hero h3{
+margin-top:15px;
+font-size:28px;
+
+color:#00cfff;
+
+text-shadow:
+0 0 10px #00cfff,
+0 0 25px #00cfff;
 }
 
-.hero-text h3{
-margin-top:10px;
-font-size:24px;
-}
-
-.btn{
-display:inline-block;
+.tagline{
 margin-top:20px;
-padding:12px 25px;
-background:#b14cff;
-color:white;
-text-decoration:none;
-border-radius:25px;
+font-size:18px;
+color:#c8d6e5;
+max-width:700px;
 }
 
-.hero img{
-width:220px;
-height:220px;
-margin-top:80px;
-border-radius:50%;
-border:5px solid #b14cff;
-}
+/* GLASS CARDS */
 
 .cards{
+padding:80px 10%;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:40px 10%;
+gap:25px;
 }
 
 .card{
-background:rgba(255,255,255,0.08);
-padding:25px;
-border-radius:10px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.08);
+padding:30px;
+border-radius:20px;
+transition:.3s;
 }
 
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px #00cfff55;
+}
+
+.card h3{
+margin-bottom:12px;
+font-size:28px;
+}
+
+.card:nth-child(1) h3{
+color:#00ffff;
+text-shadow:0 0 12px #00ffff;
+}
+
+.card:nth-child(2) h3{
+color:#4dc3ff;
+text-shadow:0 0 12px #4dc3ff;
+}
+
+.card:nth-child(3) h3{
+color:#79e8ff;
+text-shadow:0 0 12px #79e8ff;
+}
+
+/* ABOUT */
+
 .about{
-padding:60px 10%;
+padding:100px 10%;
+text-align:center;
 }
 
 .about h2{
-color:#ff8800;
+font-size:42px;
+
+color:#00cfff;
+
 text-shadow:
-0 0 10px #ff8800,
-0 0 20px #ff8800,
-0 0 40px #ff8800;
+0 0 10px #00cfff,
+0 0 25px #00cfff;
 }
 
+.about p{
+max-width:850px;
+margin:auto;
+margin-top:25px;
+font-size:18px;
+line-height:1.8;
+color:#d7e6f3;
+}
+
+/* SKILLS */
+
 .skills{
-padding:60px 10%;
+padding:100px 10%;
+}
+
+.skills h2{
+text-align:center;
+font-size:42px;
+margin-bottom:40px;
+
+color:#00cfff;
+
+text-shadow:
+0 0 10px #00cfff,
+0 0 25px #00cfff;
 }
 
 .skill{
-margin-bottom:20px;
+margin-bottom:30px;
+}
+
+.skill span{
+font-size:18px;
 }
 
 .bar{
-height:10px;
-background:#333;
-border-radius:10px;
+height:12px;
+background:#111;
+border-radius:50px;
+margin-top:10px;
+overflow:hidden;
 }
 
 .fill{
-height:10px;
-background:#b14cff;
-border-radius:10px;
+height:100%;
+border-radius:50px;
+background:linear-gradient(90deg,#00cfff,#4dc3ff);
+box-shadow:0 0 20px #00cfff;
 }
+
+/* QUOTE */
+
+.quote{
+padding:120px 20px;
+text-align:center;
+}
+
+.quote h2{
+font-size:50px;
+font-weight:800;
+
+color:#ffffff;
+
+text-shadow:
+0 0 10px #00cfff,
+0 0 20px #00cfff,
+0 0 40px #00cfff;
+}
+
+/* FOOTER */
 
 footer{
+padding:50px;
 text-align:center;
-padding:30px;
+color:#8da9c4;
+border-top:1px solid rgba(255,255,255,.08);
 }
 
-  .logo,
-h1 span,
-h2,
-.btn{
-    text-shadow: 0 0 10px #b14cff,
-                 0 0 20px #b14cff,
-                 0 0 40px #b14cff;
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
 }
 
-.hero img{
-    box-shadow: 0 0 20px #b14cff,
-                0 0 40px #b14cff;
+.hero h3{
+font-size:22px;
 }
 
-  .cards .card:nth-child(1) h3{
-color:#00ffff;
-text-shadow:0 0 15px #00ffff;
+.brand-logo{
+width:200px;
+height:200px;
 }
 
-.cards .card:nth-child(2) h3{
-color:#ff4dff;
-text-shadow:0 0 15px #ff4dff;
+.quote h2{
+font-size:30px;
 }
 
-.cards .card:nth-child(3) h3{
-color:#00ff88;
-text-shadow:0 0 15px #00ff88;
+.about h2,
+.skills h2{
+font-size:32px;
 }
 
-  .skills h2{
-color:#00ffff;
-text-shadow:
-0 0 10px #00ffff,
-0 0 20px #00ffff,
-0 0 40px #00ffff;
-  }
-
-  .hero-text h3{
-color:#00ffff;
-text-shadow:
-0 0 10px #00ffff,
-0 0 20px #00ffff,
-0 0 40px #00ffff;
-  }
-  
-  @media(max-width:768px){
-
-.hero{
-flex-direction:column;
-text-align:center;
 }
-
-.hero img{
-margin-top:50px;
-}
-
-.hero-text h1{
-font-size:48px;
-}
-
-  }
-  
 </style>
 </head>
 
 <body>
 
-</header>
-
 <section class="hero">
-<div class="hero-text">
- <h1>Alim <span>Sudamaniya</span></h1>
-<h3>Web Developer</h3>
+
+<div>
+
+<img src="IMG_20260602_225359.jpg" alt="Logo" class="brand-logo">
+
+<h1>ALIM SUDAMANIYA</h1>
+
+<h3>Web Developer • Creator • Builder</h3>
+
+<p class="tagline">
+Building modern websites, exploring new technologies and creating digital experiences that stand out.
+</p>
+
 </div>
 
-<img src="IMG_20260602_225359.jpg" alt="Alim Logo">
 </section>
 
 <section class="cards">
+
 <div class="card">
-<h3>Web Design</h3>
-<p>Creating modern websites.</p>
+<h3>Development</h3>
+<p>
+Building modern websites with clean layouts, responsive design and smooth user experiences.
+</p>
 </div>
 
 <div class="card">
-<h3>Frontend</h3>
-<p>HTML, CSS and JavaScript.</p>
+<h3>Design</h3>
+<p>
+Creating visually appealing interfaces inspired by modern web trends and creativity.
+</p>
 </div>
 
 <div class="card">
-<h3>Responsive</h3>
-<p>Mobile friendly layouts.</p>
+<h3>Innovation</h3>
+<p>
+Always learning, improving and pushing ideas further to build better digital experiences.
+</p>
 </div>
+
 </section>
 
 <section class="about">
-<h2>About Me</h2>
+
+<h2>WHO IS ALIM?</h2>
+
 <p>
-Hi, I'm Alim Sudamaniya, a Web Developer passionate about creating modern and responsive websites.
+I'm Alim Sudamaniya, a passionate web developer focused on creating modern websites and unique digital experiences. I enjoy turning ideas into reality through code and continuously expanding my skills to stay ahead in the ever-changing world of technology.
 </p>
+
 </section>
 
 <section class="skills">
-<h2>Skills</h2>
+
+<h2>SKILLS</h2>
 
 <div class="skill">
-HTML
-<div class="bar"><div class="fill" style="width:90%"></div></div>
+<span>HTML</span>
+<div class="bar">
+<div class="fill" style="width:95%"></div>
+</div>
 </div>
 
 <div class="skill">
-CSS
-<div class="bar"><div class="fill" style="width:80%"></div></div>
+<span>CSS</span>
+<div class="bar">
+<div class="fill" style="width:90%"></div>
+</div>
 </div>
 
 <div class="skill">
-JavaScript
-<div class="bar"><div class="fill" style="width:65%"></div></div>
+<span>JavaScript</span>
+<div class="bar">
+<div class="fill" style="width:75%"></div>
 </div>
+</div>
+
+<div class="skill">
+<span>GitHub</span>
+<div class="bar">
+<div class="fill" style="width:85%"></div>
+</div>
+</div>
+
+</section>
+
+<section class="quote">
+
+<h2>"TURNING IDEAS INTO WEBSITES"</h2>
 
 </section>
 
 <footer>
-© 2026 Alim Sudamaniya
+
+© 2026 ALIM SUDAMANIYA
+
 </footer>
 
 </body>
