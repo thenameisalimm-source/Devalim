@@ -14,7 +14,10 @@ font-family:Arial, sans-serif;
 }
 
 body{
-background:#050505;
+background:
+radial-gradient(circle at top left,#2a0845 0%,transparent 30%),
+radial-gradient(circle at bottom right,#16213e 0%,transparent 30%),
+linear-gradient(135deg,#050505,#0f0f18,#050505);
 color:white;
 }
 
@@ -41,6 +44,12 @@ padding:60px 10%;
 
 .hero-text h1{
 font-size:60px;
+color:#ff66ff;
+text-shadow:
+0 0 10px #ff66ff,
+0 0 20px #ff66ff,
+0 0 40px #ff66ff,
+0 0 80px #ff66ff;
 }
 
 .hero-text span{
@@ -87,8 +96,11 @@ padding:60px 10%;
 }
 
 .about h2{
-margin-bottom:20px;
-color:#b14cff;
+color:#ff8800;
+text-shadow:
+0 0 10px #ff8800,
+0 0 20px #ff8800,
+0 0 40px #ff8800;
 }
 
 .skills{
@@ -129,21 +141,41 @@ h2,
     box-shadow: 0 0 20px #b14cff,
                 0 0 40px #b14cff;
 }
+
+  .cards .card:nth-child(1) h3{
+color:#00ffff;
+text-shadow:0 0 15px #00ffff;
+}
+
+.cards .card:nth-child(2) h3{
+color:#ff4dff;
+text-shadow:0 0 15px #ff4dff;
+}
+
+.cards .card:nth-child(3) h3{
+color:#00ff88;
+text-shadow:0 0 15px #00ff88;
+}
+
+  .skills h2{
+color:#00ffff;
+text-shadow:
+0 0 10px #00ffff,
+0 0 20px #00ffff,
+0 0 40px #00ffff;
+  }
   
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">Alim</div>
 </header>
 
 <section class="hero">
 <div class="hero-text">
-<h1>Alim <span>Sudamaniya</span></h1>
+ <h1>Alim <span>Sudamaniya</span></h1>
 <h3>Web Developer</h3>
-<a href="#" class="btn">Contact Me</a>
 </div>
 
 <img src="IMG_20260602_225359.jpg" alt="Alim Logo">
