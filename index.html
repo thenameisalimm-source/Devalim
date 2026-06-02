@@ -1,333 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Alim's Website</title>
+    <title>Hacker Theme</title>
     <style>
-        html {
-        scroll-behavior: smooth;
-        }
-    
         body {
-            background: #0f172a;
-            color: white;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            padding-top: 80px;
+            background: #000;
+            color: #00ff00;
+            font-family: "Courier New", monospace;
+            margin: 0;
+            padding: 20px;
         }
 
-         h1 {
-    font-size: 40px;
-    animation: fadeIn 2s;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-        button {
-            background: #22c55e;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-        button:active{
-    transform: scale(1.1);
-            opacity: 0.9;
-        }
-            .skill {
-    background: rgba(255,255,255,0.1);
-    padding: 12px;
-    margin: 10px auto;
-    width: 180px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: 0.3s;
-            }
-
-        .skill:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #22c55e;
-        }
-        
-        .skill:active {
-    transform: scale(1.05);
-        }
-        
-        .typing {
-     animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-        .hero-image {
-    width: 100%;
-    max-width: 700px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(0,229,255,0.4);
-        }
-        .logo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: contain;
-    background: black;
-    border: 3px solid white;
-    margin-bottom: 20px;
-
-    display: block;
-    margin: 20px auto;
-
-            box-shadow: 0 0 25px rgba(255,255,255,0.8);
+        h1 {
+            text-shadow: 0 0 10px #00ff00;
         }
 
-        nav {
-    margin-bottom: 30px;
-    position: sticky;
-    top: 0;
-    background: #0f172a;
-    padding: 15px 0;
-    z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 12px;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 8px;
-}
-
-nav a:hover {
-    color: #22c55e;
-}
-        
-        .hero-text {
-    color: #22c55e;
-    font-weight: bold;
-    text-shadow: 0 0 5px #22c55e,
-                 0 0 10px #22c55e,
-                 0 0 15px #22c55e;
-        }
-        
-        #clock {
-    color: #00e5ff;
-    font-size: 22px;
-    font-weight: bold;
-    text-shadow: 0 0 10px #00e5ff;
-    margin: 10px 0;
+        .box {
+            border: 1px solid #00ff00;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px #00ff00;
         }
 
-        #typing {
-    color: #22c55e;
-    font-weight: bold;
-    text-shadow: 0 0 10px #22c55e;
+        .blink {
+            animation: blink 1s infinite;
         }
 
-        .logo {
-    animation: pulse 2s infinite alternate;
-}
-
-@keyframes pulse {
-    from {
-        box-shadow: 0 0 10px white;
-    }
-
-    to {
-        box-shadow: 0 0 30px #00e5ff;
-    }
-}
-
-        .learning-badge {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 8px 15px;
-    background: rgba(34, 197, 94, 0.15);
-    border: 1px solid #22c55e;
-    border-radius: 20px;
-    color: #22c55e;
-    font-weight: bold;
-    box-shadow: 0 0 10px #22c55e;
+        @keyframes blink {
+            50% { opacity: 0; }
         }
-
-        #quote {
-    color: white;
-    transition: 0.5s;
-        }
-
-        
     </style>
 </head>
 <body>
 
-    <nav>
-    <a href="#about">🏠 About</a>
-    <a href="#skills">💻 Skills</a>
-    <a href="#projects">🚀 Projects</a>
-    <a href="#goals">🎯 Goals</a>
-    </nav>
+<h1>ACCESS GRANTED <span class="blink">_</span></h1>
 
-    <img src="IMG_20260601_054525.jpg" class="hero-image">
-    
-    <img src="IMG_20260601_035434.jpg" class="logo">
-    
-    <h1 id="welcome"></h1>
-    
-    <p>👋 Welcome to my portfolio website!</p>
-    <p id="typing"></p>
+<div class="box">
+    <p>Welcome to my hacker-themed website.</p>
+    <p>System Status: ONLINE</p>
+    <p>Connection: SECURE</p>
+</div>
 
-    <p id="clock"></p>
-
-    <div class="learning-badge">
-📚 Currently Learning: JavaScript
-    </div>
-    
-    <h2 id="about">About Me</h2>
-    <p id="aboutText"></p>
-    
-    <p id="quote"></p>
-    
-    <h2>Contact Me</h2>
-<a href="mailto:sudamaniyaaleem136@gmail.com">
-    <button>📧 Contact Me</button>
-</a>
-        <button onclick="window.open('https://github.com/thenameisalimm-source')">
-   🔥 My GitHub
-        </button>
-        <h2 id="skills">My Skills</h2>
-<div class="skill">🌐 HTML</div>
-<div class="skill">🎨 CSS</div>
-<div class="skill">🚀 GitHub Pages</div>
-
-<h2 id="projects">Projects</h2>
-<div class="skill">✅ My First Website</div>
-<div class="skill">🎮 Future Game Website</div>
-<div class="skill">📱 Portfolio Website</div>
-
-    <h2 id="goals">Achievements & Goals</h2>
-
-<div class="skill">🏆 Built my first website</div>
-<div class="skill">🎯 Learn JavaScript</div>
-<div class="skill">🎯 Create a portfolio website</div>
-<div class="skill">🎮 Publish a game</div>
-
-<hr>
-
-<p>Made with ❤️ by Alim</p>
-    
-    <script>
-function updateClock() {
-    document.getElementById("clock").innerHTML =
-        new Date().toLocaleTimeString('en-US', {
-    hour: 'numeric',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true
-});
-}const text = "🚀 Future Full-Stack Developer";
-let i = 0;
-
-function typeWriter() {
-    if (i < text.length) {
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 100);
-    }
-}
-
-        const welcomeText = "Welcome to Alim's Website 🚀";
-let w = 0;
-
-function typeWelcome() {
-    if (w < welcomeText.length) {
-        document.getElementById("welcome").innerHTML += welcomeText.charAt(w);
-        w++;
-        setTimeout(typeWelcome, 80);
-    }
-}
-
-const aboutText = "Hi, I'm Alim. I'm learning web development.";
-let a = 0;
-
-function typeAbout() {
-    if (a < aboutText.length) {
-        document.getElementById("aboutText").innerHTML += aboutText.charAt(a);
-        a++;
-        setTimeout(typeAbout, 50);
-    }
-}
-        typeWelcome();
-
-setTimeout(typeAbout, 2500);
-
-setTimeout(typeWriter, 5000);
-        
-
-setInterval(updateClock, 1000);
-updateClock();
-
-        const quotes = [
-    "Every expert was once a beginner.",
-    "Code. Learn. Build.",
-    "Small steps every day.",
-    "Dream big. Start small."
-];
-
-let quoteIndex = 0;
-
-function typeQuote() {
-    let q = 0;
-    let currentQuote = quotes[quoteIndex];
-
-    document.getElementById("quote").innerHTML = "";
-
-    function typing() {
-        if (q < currentQuote.length) {
-            document.getElementById("quote").innerHTML += currentQuote.charAt(q);
-            q++;
-            setTimeout(typing, 50);
-        } else {
-            setTimeout(() => {
-                quoteIndex++;
-
-                if (quoteIndex >= quotes.length) {
-                    quoteIndex = 0;
-                }
-
-                typeQuote();
-            }, 2000);
-        }
-    }
-
-    typing();
-}
-
-typeQuote();
-    </script>
-
-    
 </body>
 </html>
-    
-    
-
-    
-
-    
-
-
